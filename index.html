@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mitarbeiterdatenbank</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>Mitarbeiterdatenbank</h1>
+			<button class="add-btn" onclick="openForm()">Mitarbeiter hinzufügen</button>
+			<input type="text" placeholder="Suchen..." onkeyup="search()">
+		</div>
+		<div class="cards-container" id="cards-container">
+			<!-- Karten der Mitarbeiter -->
+		</div>
+	</div>
+
+	<!-- Popup-Formular zum Hinzufügen von Mitarbeitern -->
+	<div class="form-popup" id="form-popup">
+		<form class="form-container">
+			<h2>Neuen Mitarbeiter hinzufügen</h2>
+			<label for="name"><b>Name</b></label>
+			<input type="text" placeholder="Name" name="name" required>
+
+			<label for="address"><b>Adresse</b></label>
+			<input type="text" placeholder="Adresse" name="address" required>
+
+			<label for="phone"><b>Telefonnummer</b></label>
+			<input type="tel" placeholder="Telefonnummer" name="phone" required>
+
+			<label for="position"><b>Position</b></label>
+			<input type="text" placeholder="Position" name="position" required>
+
+			<label for="department"><b>Abteilung</b></label>
+			<input type="text" placeholder="Abteilung" name="department" required>
+
+			<label for="photo"><b>Foto</b></label>
+			<input type="url" placeholder="URL zum Foto" name="photo" required>
+
+			<button type="submit" class="btn">Speichern</button>
+			<button type="button" class="btn cancel" onclick="closeForm()">Abbrechen</button>
+		</form>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
